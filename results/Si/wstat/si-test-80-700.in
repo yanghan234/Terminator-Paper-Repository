@@ -1,0 +1,11 @@
+&input_west
+qe_prefix='./si-80-700'
+west_prefix='./si_kin_80_700'
+outdir='./'
+/
+&wstat_control
+wstat_calculation = 'S'
+n_pdep_eigen      = 700
+n_read_old_dvg    = 80
+l_kinetic_only    = .True.
+/

@@ -1,0 +1,10 @@
+&INPUT_WEST
+           qe_prefix = 'ch4',
+         west_prefix = 'ch4_10_400',
+              outdir = './',
+/
+&WSTAT_CONTROL
+   wstat_calculation = 'S',
+        n_pdep_eigen = 10,
+    n_kin_pdep_eigen = 400,
+/

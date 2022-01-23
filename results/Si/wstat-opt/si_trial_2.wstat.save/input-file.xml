@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?iotk version="1.2.0"?>
+<?iotk file_version="1.0"?>
+<?iotk binary="F"?>
+<?iotk qe_syntax="F"?>
+<Root>
+  <WSTAT_CONTROL>
+    <wstat_calculation type="character" size="1" len="1">
+S
+    </wstat_calculation>
+    <n_pdep_eigen type="integer" size="1">
+        50
+    </n_pdep_eigen>
+    <n_pdep_times type="integer" size="1">
+         4
+    </n_pdep_times>
+    <n_pdep_maxiter type="integer" size="1">
+       100
+    </n_pdep_maxiter>
+    <n_dfpt_maxiter type="integer" size="1">
+       250
+    </n_dfpt_maxiter>
+    <n_pdep_read_from_file type="integer" size="1">
+         0
+    </n_pdep_read_from_file>
+    <trev_pdep type="real" size="1">
+ 1.000000000000000E-003
+    </trev_pdep>
+    <trev_pdep_rel type="real" size="1">
+ 1.000000000000000E-001
+    </trev_pdep_rel>
+    <tr2_dfpt type="real" size="1">
+ 1.000000000000000E-012
+    </tr2_dfpt>
+    <l_kinetic_only type="logical" size="1">
+F
+    </l_kinetic_only>
+    <l_minimize_exx_if_active type="logical" size="1">
+F
+    </l_minimize_exx_if_active>
+    <l_use_ecutrho type="logical" size="1">
+F
+    </l_use_ecutrho>
+  </WSTAT_CONTROL>
+</Root>
+ 

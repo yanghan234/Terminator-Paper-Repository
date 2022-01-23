@@ -1,0 +1,90 @@
+#!/bin/bash
+#SBATCH --job-name=pwscf
+#SBATCH --output=test_sbatch.out
+#SBATCH --error=test_sbatch.err
+#SBATCH --time=10:00:00
+#SBATCH --account=pi-gagalli
+#SBATCH --partition=gagalli
+#SBATCH --qos=gagalli-small
+#SBATCH --constraint=e5-2680v2
+#SBATCH --nodes=4
+#SBATCH --ntasks-per-node=20
+
+# LOAD MODULE ENVIRONMENT
+#module load  espresso/6.0-west-2.0+intelmpi-5.1+intel-16.0
+#
+module unload mkl intel intelmpi
+module load mkl intel intelmpi
+# RUN JOB BELOW
+cd /project/gagalli/yanghan/G2_97/C2H2-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < c2h2.in >& c2h2.out
+cd /project/gagalli/yanghan/G2_97/C2H4-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < c2h4.in >& c2h4.out
+cd /project/gagalli/yanghan/G2_97/C4H4S-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < c4h4s.in >& c4h4s.out
+cd /project/gagalli/yanghan/G2_97/C6H6-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < c6h6.in >& c6h6.out
+cd /project/gagalli/yanghan/G2_97/CH3Cl-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < ch3cl.in >& ch3cl.out
+cd /project/gagalli/yanghan/G2_97/CH3OH-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < ch3oh.in >& ch3oh.out
+cd /project/gagalli/yanghan/G2_97/CH3SH-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < ch3sh.in >& ch3sh.out
+cd /project/gagalli/yanghan/G2_97/CH4-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < ch4.in >& ch4.out
+cd /project/gagalli/yanghan/G2_97/Cl2-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < cl2.in >& cl2.out
+cd /project/gagalli/yanghan/G2_97/ClF-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < clf.in >& clf.out
+cd /project/gagalli/yanghan/G2_97/CO-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < co.in >& co.out
+cd /project/gagalli/yanghan/G2_97/CO2-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < co2.in >& co2.out
+cd /project/gagalli/yanghan/G2_97/CS-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < cs.in >& cs.out
+cd /project/gagalli/yanghan/G2_97/F2-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < f2.in >& f2.out
+cd /project/gagalli/yanghan/G2_97/H2CO-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < h2co.in >& h2co.out
+cd /project/gagalli/yanghan/G2_97/H2O-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < h2o.in >& h2o.out
+cd /project/gagalli/yanghan/G2_97/H2O2-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < h2o2.in >& h2o2.out
+cd /project/gagalli/yanghan/G2_97/HCl-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < hcl.in >& hcl.out
+cd /project/gagalli/yanghan/G2_97/HCN-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < hcn.in >& hcn.out
+cd /project/gagalli/yanghan/G2_97/HF-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < hf.in >& hf.out
+cd /project/gagalli/yanghan/G2_97/HOCl-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < hocl.in >& hocl.out
+cd /project/gagalli/yanghan/G2_97/Li2-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < li2.in >& li2.out
+cd /project/gagalli/yanghan/G2_97/LiF-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < lif.in >& lif.out
+cd /project/gagalli/yanghan/G2_97/LiH-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < lih.in >& lih.out
+cd /project/gagalli/yanghan/G2_97/N2-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < n2.in >& n2.out
+cd /project/gagalli/yanghan/G2_97/N2H4-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < n2h4.in >& n2h4.out
+cd /project/gagalli/yanghan/G2_97/Na2-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < na2.in >& na2.out
+cd /project/gagalli/yanghan/G2_97/NaCl-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < nacl.in >& nacl.out
+cd /project/gagalli/yanghan/G2_97/NH3-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < nh3.in >& nh3.out
+cd /project/gagalli/yanghan/G2_97/P2-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < p2.in >& p2.out
+cd /project/gagalli/yanghan/G2_97/PH3-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < ph3.in >& ph3.out
+cd /project/gagalli/yanghan/G2_97/SH2-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < sh2.in >& sh2.out
+cd /project/gagalli/yanghan/G2_97/Si2H6-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < si2h6.in >& si2h6.out
+cd /project/gagalli/yanghan/G2_97/SiH4-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < sih4.in >& sih4.out
+cd /project/gagalli/yanghan/G2_97/SiO-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < sio.in >& sio.out
+cd /project/gagalli/yanghan/G2_97/SO2-PBE/pw
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/pw.x < so2.in >& so2.out

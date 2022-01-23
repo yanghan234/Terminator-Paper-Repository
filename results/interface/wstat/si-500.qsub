@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH --job-name=int-500
+#SBATCH --output=test_sbatch.out
+#SBATCH --error=test_sbatch.err
+#SBATCH --time=18:00:00
+#SBATCH --account=pi-gagalli
+#SBATCH --partition=gagalli
+#SBATCH --qos=gagalli-medium
+#SBATCH --constraint=e5-2680v2
+#SBATCH --nodes=8
+#SBATCH --ntasks-per-node=20
+
+# module load mkl intelmpi intel 
+
+# RUN JOB BELOW
+module unload mkl intel intelmpi
+module load intel intelmpi mkl
+
+mpirun -n 160 /project/gagalli/yanghan/midway1/qe-6.1/bin/wstat.x    -nimage 20 < si-500.in >& si-500.out

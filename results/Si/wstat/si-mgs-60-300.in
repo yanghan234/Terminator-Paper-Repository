@@ -1,0 +1,11 @@
+&input_west
+qe_prefix='./si-60-300'
+west_prefix='./si_kin_60_300'
+outdir='./'
+/
+&wstat_control
+wstat_calculation = 'S'
+n_pdep_eigen      = 300
+n_read_old_dvg    = 60
+l_mgs_only        = .True.
+/

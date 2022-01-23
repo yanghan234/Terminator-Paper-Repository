@@ -1,0 +1,9 @@
+&input_west
+qe_prefix='../pw/silane'
+west_prefix='./silane'
+outdir='./'
+/
+&wstat_control
+wstat_calculation = 'S'
+n_pdep_eigen      = 100 
+/

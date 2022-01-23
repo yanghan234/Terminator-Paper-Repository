@@ -1,0 +1,9 @@
+&INPUT_WEST
+           qe_prefix = 'ph3',
+         west_prefix = 'ph3_420',
+              outdir = './',
+/
+&WSTAT_CONTROL
+   wstat_calculation = 'S',
+        n_pdep_eigen = 420,
+/

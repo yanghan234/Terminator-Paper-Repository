@@ -1,0 +1,22 @@
+ &INPUTPP
+                      prefix = 'si-rrkj' ,
+                      outdir = './' ,
+                     filplot = 'out.rrkj' ,
+                    plot_num = 11,
+ /
+ &PLOT
+                       nfile = 1 ,
+                     fileout = 'plot.rrkj' ,
+                  filepp(1)  = 'out.rrkj',
+               output_format = 0,
+               interpolation = 'bspline'
+                       iflag = 1
+                       e1(1) = 0,
+                       e1(2) = 0,
+                       e1(3) = 1,
+                       x0(1) = 0,
+                       x0(2) = 0,
+                       x0(3) = 0,
+                          nx = 500 ,
+ /
+

@@ -1,0 +1,30 @@
+&control
+    calculation='scf',
+    restart_mode='from_scratch',
+    prefix='n-atom'
+    wf_collect=.true.
+    pseudo_dir='./',
+    outdir='./',
+ /
+ &system
+    ibrav = 1,
+    celldm(1) = 20.5290,
+    nat=1,
+    ntyp=1,
+    ecutwfc = 70,
+    nbnd = 20,
+    nosym=.true.,
+    nspin = 2,
+    tot_magnetization = 3,
+    occupations = 'smearing',
+    smearing = 'gauss',
+    degauss = 0.001,
+    assume_isolated = 'mp'
+ /
+ &electrons
+    mixing_beta = 0.7
+ /
+ ATOMIC_SPECIES
+    N  14.0067 N_ONCV_PBE-1.0.upf
+ ATOMIC_POSITIONS {bohr}
+  N  0.0  0.0 0.0 

@@ -1,0 +1,10 @@
+&input_west
+qe_prefix='si-kin-1000'
+west_prefix='si_kin_1000'
+outdir='./'
+/
+&wstat_control
+wstat_calculation = 'S'
+n_pdep_eigen      = 1000
+l_kinetic_only    = .True.
+/

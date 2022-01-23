@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH --job-name=co2
+#SBATCH --output=test_sbatch.out
+#SBATCH --error=test_sbatch.err
+#SBATCH --time=10:00:00
+#SBATCH --account=pi-gagalli
+#SBATCH --partition=gagalli
+#SBATCH --qos=gagalli-medium
+#SBATCH --constraint=e5-2680v2
+#SBATCH --nodes=8
+#SBATCH --ntasks-per-node=20
+
+# LOAD MODULE ENVIRONMENT
+#module load  espresso/6.0-west-2.0+intelmpi-5.1+intel-16.0
+#
+module unload mkl intel intelmpi
+module load mkl intel intelmpi
+# RUN JOB BELOW
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/wstat.x -nimage 10 < co2_20_400.in >& co2_20_400.out
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/wstat.x -nimage 10 < co2_100_400.in >& co2_100_400.out
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/wstat.x -nimage 10 < co2_420.in >& co2_420.out
+mpirun /project/gagalli/yanghan/midway1/my-qe-6.1/bin/wstat.x -nimage 10 < co2_500.in >& co2_500.out

@@ -1,0 +1,9 @@
+&INPUT_WEST
+           qe_prefix = 'lih',
+         west_prefix = 'lih_420',
+              outdir = './',
+/
+&WSTAT_CONTROL
+   wstat_calculation = 'S',
+        n_pdep_eigen = 420,
+/

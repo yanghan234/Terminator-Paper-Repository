@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?iotk version="1.2.0"?>
+<?iotk file_version="1.0"?>
+<?iotk binary="F"?>
+<?iotk qe_syntax="F"?>
+<Root>
+  <BKS-SUMMARY>
+    <lastdone_ks type="integer" size="1">
+         1
+    </lastdone_ks>
+    <lastdone_band type="integer" size="1">
+         9
+    </lastdone_band>
+    <old_ks type="integer" size="1">
+         1
+    </old_ks>
+    <old_band type="integer" size="1">
+         8
+    </old_band>
+    <max_ks type="integer" size="1">
+         1
+    </max_ks>
+    <max_band type="integer" size="1">
+         7
+    </max_band>
+    <min_ks type="integer" size="1">
+         1
+    </min_ks>
+    <min_band type="integer" size="1">
+         1
+    </min_band>
+  </BKS-SUMMARY>
+</Root>
+ 

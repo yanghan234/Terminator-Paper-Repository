@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH --job-name=co2-400
+#SBATCH --output=test_sbatch.out
+#SBATCH --error=test_sbatch.err
+#SBATCH --time=10:00:00
+#SBATCH --account=pi-gagalli
+#SBATCH --partition=gagalli
+#SBATCH --qos=gagalli-medium
+#SBATCH --constraint=e5-2680v2
+#SBATCH --nodes=8
+#SBATCH --ntasks-per-node=20
+
+# LOAD MODULE ENVIRONMENT
+#module load  espresso/6.0-west-2.0+intelmpi-5.1+intel-16.0
+#
+module unload mkl intel intelmpi
+module load mkl intel intelmpi
+# RUN JOB BELOW
+mpirun /project/gagalli/yanghan/midway1/my2-qe-6.1/bin/wfreq.x -nimage 10 < std-400.in >& std-400.out

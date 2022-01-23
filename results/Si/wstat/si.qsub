@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --job-name=silane
+#SBATCH --output=test_sbatch.out
+#SBATCH --error=test_sbatch.err
+#SBATCH --time=10:00:00
+#SBATCH --account=pi-gagalli
+#SBATCH --partition=gagalli
+#SBATCH --qos=gagalli-small
+#SBATCH --constraint=e5-2680v2
+#SBATCH --nodes=4
+#SBATCH --ntasks-per-node=20
+
+# module load mkl intelmpi intel 
+
+# RUN JOB BELOW

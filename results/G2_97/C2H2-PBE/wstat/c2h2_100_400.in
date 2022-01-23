@@ -1,0 +1,10 @@
+&INPUT_WEST
+           qe_prefix = 'c2h2',
+         west_prefix = 'c2h2_100_400',
+              outdir = './',
+/
+&WSTAT_CONTROL
+   wstat_calculation = 'S',
+        n_pdep_eigen = 100,
+    n_kin_pdep_eigen = 400,
+/

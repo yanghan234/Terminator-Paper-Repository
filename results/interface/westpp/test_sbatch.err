@@ -1,0 +1,6 @@
+WARNING: intelmpi/5.1+intel-16.0 cannot be loaded due to a conflict.
+HINT: Might try "module unload intelmpi" first.
+WARNING: Unable to load compiler module 'intelmpi/5.1+intel-16.0'
+WARNING: Module 'espresso/6.0-west-2.0+intelmpi-5.1+intel-16.0' may not work but loading anyway
+WARNING: mkl/2017 cannot be loaded due to a conflict.
+HINT: Might try "module unload mkl" first.

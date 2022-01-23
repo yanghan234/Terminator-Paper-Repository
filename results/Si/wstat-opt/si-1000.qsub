@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH --job-name=si-1000
+#SBATCH --output=test_sbatch.out
+#SBATCH --error=test_sbatch.err
+#SBATCH --time=10:00:00
+#SBATCH --account=pi-gagalli
+#SBATCH --partition=gagalli
+#SBATCH --qos=gagalli-medium
+#SBATCH --constraint=e5-2680v2
+#SBATCH --nodes=10
+#SBATCH --ntasks-per-node=16
+
+module load mkl intelmpi intel 
+
+# RUN JOB BELOW
+
+mpirun -n 160 /project/gagalli/yanghan/midway1/qe-6.1/bin/wstat.x -nimage 16 < si-1000.in >& si-1000.out 

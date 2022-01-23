@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH --job-name=westpp_int
+#SBATCH --output=test_sbatch.out
+#SBATCH --error=test_sbatch.err
+#SBATCH --time=02:00:00
+#SBATCH --account=pi-gagalli
+#SBATCH --partition=gagalli-csl
+#SBATCH --qos=gagalli-debug
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=40
+#SBATCH --mail-user=yanghan@uchicago.edu
+#SBATCH --mail-type=ALL
+
+# LOAD MODULE ENVIRONMENT
+module load  espresso/6.0-west-2.0+intelmpi-5.1+intel-16.0
+#
+# module unload mkl intel intelmpi
+# module load mkl intel intelmpi
+# RUN JOB BELOW
+# mpirun -n 80 /project/gagalli/yanghan/midway1/qe-6.1/bin/pw.x  < si.in >& si.out
+# mpirun -np 80 pw.x  < si.in >& si.out
+mpirun -np 80 westpp.x  < westpp.in >& westpp.out

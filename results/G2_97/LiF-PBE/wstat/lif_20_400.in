@@ -1,0 +1,10 @@
+&INPUT_WEST
+           qe_prefix = 'lif',
+         west_prefix = 'lif_20_400',
+              outdir = './',
+/
+&WSTAT_CONTROL
+   wstat_calculation = 'S',
+        n_pdep_eigen = 20,
+    n_kin_pdep_eigen = 400,
+/

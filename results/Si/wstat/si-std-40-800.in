@@ -1,0 +1,9 @@
+&input_west
+qe_prefix='./si-40-800'
+west_prefix='./si_kin_40_800'
+outdir='./'
+/
+&wstat_control
+wstat_calculation = 'S'
+n_pdep_eigen      = 40
+/

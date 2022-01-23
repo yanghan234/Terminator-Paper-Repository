@@ -1,0 +1,16 @@
+&input_west
+qe_prefix = 'si-1000',
+west_prefix = 'si_1000',
+outdir = './'
+/
+&wstat_control
+wstat_calculation = 'S',
+n_pdep_eigen = 1000
+/
+&westpp_control 
+westpp_calculation = 'H',
+westpp_n_pdep_eigen_to_use = 1000,
+westpp_range(1) = 120,
+westpp_range(2) = 128 
+/
+

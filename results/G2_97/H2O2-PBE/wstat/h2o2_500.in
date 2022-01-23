@@ -1,0 +1,9 @@
+&INPUT_WEST
+           qe_prefix = 'h2o2',
+         west_prefix = 'h2o2_500',
+              outdir = './',
+/
+&WSTAT_CONTROL
+   wstat_calculation = 'S',
+        n_pdep_eigen = 500,
+/

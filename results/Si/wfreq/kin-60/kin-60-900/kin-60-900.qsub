@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --job-name=k-960
+#SBATCH --output=test_sbatch.out
+#SBATCH --error=test_sbatch.err
+#SBATCH --time=36:00:00
+#SBATCH --account=pi-gagalli
+#SBATCH --partition=broadwl
+##SBATCH --qos=gagalli-small
+#SBATCH --nodes=8
+#SBATCH --ntasks-per-node=20
+#SBATCH --mail-type=END
+#SBATCH --mail-user=yanghan@uchicago.edu
+
+
+mpirun -n 160 /project/gagalli/yanghan/midway2/qe-6.1/bin/wfreq.x -nimage 16 < kin-60-900.in >& kin-60-900.out

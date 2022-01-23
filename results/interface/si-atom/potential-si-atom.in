@@ -1,0 +1,22 @@
+ &INPUTPP
+                      prefix = 'si-atom' ,
+                      outdir = './' ,
+                     filplot = 'si-atom.dat' ,
+                    plot_num = 11,
+ /
+ &PLOT
+                       nfile = 1 ,
+                     fileout = 'si-atom.plot' ,
+                  filepp(1)  = 'si-atom.dat',
+               output_format = 0,
+               interpolation = 'bspline'
+                       iflag = 1
+                       e1(1) = 0,
+                       e1(2) = 0,
+                       e1(3) = 2.955210,
+                       x0(1) = 0,
+                       x0(2) = 0,
+                       x0(3) = 0,
+                          nx = 500 ,
+ /
+

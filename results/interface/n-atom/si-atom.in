@@ -1,0 +1,36 @@
+&control
+    calculation='scf',
+    restart_mode='from_scratch',
+    prefix='si-atom'
+    wf_collect=.true.
+    pseudo_dir='./',
+    outdir='./',
+ /
+ &system
+    ibrav = 1,
+    celldm(1) = 20.5290,
+    celldm(2) = 20.5290,
+    celldm(3) = 60.6675,
+    nr1 = 120,
+    nr2 = 120,
+    nr3 = 324,
+    nat=1,
+    ntyp=1,
+    ecutwfc = 40,
+    nbnd = 20,
+    nosym=.true.,
+    nspin = 2,
+    starting_magnetization = 2,
+    tot_magnetization = 2,
+    occupations = 'smearing',
+    smearing = 'gauss',
+    degauss = 0.001,
+    assume_isolated = 'mp'
+ /
+ &electrons
+    mixing_beta = 0.7
+ /
+ ATOMIC_SPECIES
+    Si  28.086 Si_ONCV_PBE-1.1.upf
+ ATOMIC_POSITIONS {bohr} 
+  Si   10.2645  10.2645  30.33375 
